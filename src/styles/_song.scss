@@ -1,0 +1,39 @@
+.song-container {
+	min-height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	img {
+		width: 20%;
+		border-radius: 50%;
+	}
+	.animate-img {
+		animation: wheel 10s linear infinite;
+	}
+	.animation-running {
+		animation-play-state: running;
+	}
+	.animation-paused {
+		animation-play-state: paused;
+	}
+	@keyframes wheel {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	h2 {
+		padding: 3rem 1rem 1rem 1rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.song-container {
+		img {
+			width: 60%;
+		}
+	}
+}
